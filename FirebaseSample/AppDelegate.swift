@@ -13,6 +13,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var code: String!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -44,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        print("url : \(url)")
-        print("query : \(url.query)")
+//        print("url : \(url)")
+        code = url.query!
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let openVC: ViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! ViewController
