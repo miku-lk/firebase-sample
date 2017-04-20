@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
+    @IBOutlet var textLabel: UILabel!
+    @IBOutlet var detailTextLabel: UILabel!
+    
+    var accessToken: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +24,7 @@ class ViewController: UIViewController {
 //        print(code)
         
         sendPOSTRequest(code: code)
+        
     }
 
     func getCodeFromQuery(query: String) -> String {
@@ -49,14 +55,11 @@ class ViewController: UIViewController {
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
         let task = session.dataTask(with: request, completionHandler: getAccessToken)
+//        let task = session.dataTask(with: URL) { (data, response, error) in
+//            // todo
+//            
+//        }
         task.resume()
-        
-        /*
-         todo:
-         tokenQuery // "access_token=1234567890&scope=..."
-         ->
-         token      // "1234567890"
-        */
         
     }
     
@@ -66,8 +69,30 @@ class ViewController: UIViewController {
         let urlStr: String = "http://example.com/?" + tokenQuery
         let comp: NSURLComponents? = NSURLComponents(string: urlStr)
         let fragments = generateDictionalyFromUrlComponents(components: comp!)
-        let accessToken: String = fragments["access_token"]!
+        accessToken = fragments["access_token"]!
         print("access_token: \(accessToken)")
+        
+        let credential = FIRGitHubAuthProvider.credential(withToken: accessToken)
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            
+            if let error = error {
+                // ...
+                return
+            }
+            if let userInfo = FIRAuth.auth()?.currentUser?.providerData{
+                for item in userInfo{
+                    if item.providerID == "github.com"{
+                        self.textLabel.text = item.providerID
+                        // Provider-specific UID
+                        self.detailTextLabel.text = item.displayName
+                    }
+                    else if item.providerID == ""{
+                        // hoge
+                    }
+                }
+            }
+        }
+        
     }
     
     // http://fromatom.hatenablog.com/entry/2015/10/27/125622

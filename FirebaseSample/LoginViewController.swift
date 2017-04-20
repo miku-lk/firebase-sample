@@ -34,11 +34,6 @@ class LoginViewController: UIViewController {
         let loginUrl: NSURL = NSURL(string: loginUrlStr)!
         self.present(SFSafariViewController(url: loginUrl as URL), animated: true)
         
-        
-        
-//        let credential = FIRGitHubAuthProvider.credential(withToken: <#T##String#>)
-//        FIRAuth.auth()?.signIn(with: credential, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, Error?) -> Void#>)
-        
     }
 
     override func didReceiveMemoryWarning() {
