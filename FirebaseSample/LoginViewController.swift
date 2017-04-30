@@ -11,16 +11,24 @@ import Firebase
 import FirebaseAuth
 import SafariServices
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     let clientId: String = "cb11c659caf1bb6d9491"
+    let modalInstance = ModalAnimation()
     
     @IBOutlet var loginButton: UIButton!
-
+    
+    var safariVC: SFSafariViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let loginUrlStr: String = "https://github.com/login/oauth/authorize?client_id=" + clientId
+        let loginUrl: NSURL = NSURL(string: loginUrlStr)!
+        safariVC = SFSafariViewController(url: loginUrl as URL)
+        safariVC.transitioningDelegate = self
+        
     }
     
     @IBAction func login(){
@@ -30,10 +38,19 @@ class LoginViewController: UIViewController {
 //        if let pwText = passwordField.text{
 //            print(pwText)
 //        }
-        let loginUrlStr: String = "https://github.com/login/oauth/authorize?client_id=" + clientId
-        let loginUrl: NSURL = NSURL(string: loginUrlStr)!
-        self.present(SFSafariViewController(url: loginUrl as URL), animated: true)
         
+        self.present(safariVC, animated: true)
+        
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        modalInstance.presenting = true
+        return modalInstance
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        modalInstance.presenting = false
+        return modalInstance
     }
 
     override func didReceiveMemoryWarning() {

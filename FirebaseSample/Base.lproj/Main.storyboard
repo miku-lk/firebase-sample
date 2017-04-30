@@ -57,7 +57,7 @@
         <!--Login View Controller-->
         <scene sceneID="tfJ-z7-nC6">
             <objects>
-                <viewController id="J6G-O8-daO" customClass="LoginViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J6G-O8-daO" customClass="LoginViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hnj-FB-ExE"/>
                         <viewControllerLayoutGuide type="bottom" id="Qf0-8N-FQn"/>

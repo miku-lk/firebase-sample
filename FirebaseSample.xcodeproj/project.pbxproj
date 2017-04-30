@@ -16,6 +16,7 @@
 		2F12CB761E9523FF00ECAA5A /* FirebaseSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12CB751E9523FF00ECAA5A /* FirebaseSampleTests.swift */; };
 		2F12CB811E95240000ECAA5A /* FirebaseSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12CB801E95240000ECAA5A /* FirebaseSampleUITests.swift */; };
 		2F12CB8F1E95242A00ECAA5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */; };
+		2F4C1B2D1EA888340045853F /* ModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C1B2C1EA888340045853F /* ModalAnimation.swift */; };
 		2F9E41471E97B5AC000AB88F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E41461E97B5AC000AB88F /* LoginViewController.swift */; };
 		6B95A6F075153F1B02EF0C50 /* Pods_FirebaseSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765EC16B5E4FFC50607FD0AF /* Pods_FirebaseSampleTests.framework */; };
 		E4376CB288D4F52839E2E40E /* Pods_FirebaseSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A9858958F3E69D51128DB8 /* Pods_FirebaseSampleUITests.framework */; };
@@ -55,6 +56,7 @@
 		2F12CB801E95240000ECAA5A /* FirebaseSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSampleUITests.swift; sourceTree = "<group>"; };
 		2F12CB821E95240000ECAA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2F4C1B2C1EA888340045853F /* ModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAnimation.swift; sourceTree = "<group>"; };
 		2F9E41461E97B5AC000AB88F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C816B62B63FCF57C9393220 /* Pods-FirebaseSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		529664C79AA2AFE5D1C32B56 /* Pods-FirebaseSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,13 +121,14 @@
 			isa = PBXGroup;
 			children = (
 				2F12CB601E9523FF00ECAA5A /* AppDelegate.swift */,
-				2F12CB621E9523FF00ECAA5A /* ViewController.swift */,
 				2F12CB641E9523FF00ECAA5A /* Main.storyboard */,
 				2F12CB671E9523FF00ECAA5A /* Assets.xcassets */,
 				2F12CB691E9523FF00ECAA5A /* LaunchScreen.storyboard */,
 				2F12CB6C1E9523FF00ECAA5A /* Info.plist */,
 				2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */,
 				2F9E41461E97B5AC000AB88F /* LoginViewController.swift */,
+				2F12CB621E9523FF00ECAA5A /* ViewController.swift */,
+				2F4C1B2C1EA888340045853F /* ModalAnimation.swift */,
 			);
 			path = FirebaseSample;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4C1B2D1EA888340045853F /* ModalAnimation.swift in Sources */,
 				2F9E41471E97B5AC000AB88F /* LoginViewController.swift in Sources */,
 				2F12CB631E9523FF00ECAA5A /* ViewController.swift in Sources */,
 				2F12CB611E9523FF00ECAA5A /* AppDelegate.swift in Sources */,
