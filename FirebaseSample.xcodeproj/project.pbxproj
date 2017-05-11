@@ -119,13 +119,13 @@
 			isa = PBXGroup;
 			children = (
 				2F12CB601E9523FF00ECAA5A /* AppDelegate.swift */,
-				2F12CB621E9523FF00ECAA5A /* ViewController.swift */,
 				2F12CB641E9523FF00ECAA5A /* Main.storyboard */,
 				2F12CB671E9523FF00ECAA5A /* Assets.xcassets */,
 				2F12CB691E9523FF00ECAA5A /* LaunchScreen.storyboard */,
 				2F12CB6C1E9523FF00ECAA5A /* Info.plist */,
 				2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */,
 				2F9E41461E97B5AC000AB88F /* LoginViewController.swift */,
+				2F12CB621E9523FF00ECAA5A /* ViewController.swift */,
 			);
 			path = FirebaseSample;
 			sourceTree = "<group>";

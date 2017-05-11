@@ -20,16 +20,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        }
     
     @IBAction func login(){
-//        if let idText = githubIdField.text{
-//            print(idText)
-//        }
-//        if let pwText = passwordField.text{
-//            print(pwText)
-//        }
+
         let loginUrlStr: String = "https://github.com/login/oauth/authorize?client_id=" + clientId
         let loginUrl: NSURL = NSURL(string: loginUrlStr)!
         self.present(SFSafariViewController(url: loginUrl as URL), animated: true)

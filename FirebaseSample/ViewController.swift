@@ -17,11 +17,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let code = getCodeFromQuery(query: appDelegate.code)
-//        print(code)
         
         sendPOSTRequest(code: code)
         
@@ -55,6 +53,7 @@ class ViewController: UIViewController {
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
         let task = session.dataTask(with: request, completionHandler: getAccessToken)
+//        // 別の書き方
 //        let task = session.dataTask(with: URL) { (data, response, error) in
 //            // todo
 //            
@@ -83,7 +82,6 @@ class ViewController: UIViewController {
                 for item in userInfo{
                     if item.providerID == "github.com"{
                         self.textLabel.text = item.providerID
-                        // Provider-specific UID
                         self.detailTextLabel.text = item.displayName
                     }
                     else if item.providerID == ""{
@@ -95,6 +93,7 @@ class ViewController: UIViewController {
         
     }
     
+    // URLQuery の値を取得
     // http://fromatom.hatenablog.com/entry/2015/10/27/125622
     func generateDictionalyFromUrlComponents(components: NSURLComponents) -> [String : String] {
         var fragments: [String : String] = [:]
