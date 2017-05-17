@@ -44,13 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    // custom url scheme が呼ばれた時の処理
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        print("url : \(url)")
         code = url.query!
         
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let openVC: ViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! ViewController
-        self.window?.rootViewController = openVC
+//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let openVC: ViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! ViewController
+//        self.window?.rootViewController = openVC
         return true
     }
 

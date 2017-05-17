@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let code = getCodeFromQuery(query: appDelegate.code)
-        
-        sendPOSTRequest(code: code)
+//        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let code = getCodeFromQuery(query: appDelegate.code)
+//        
+//        sendPOSTRequest(code: code)
         
     }
 

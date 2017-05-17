@@ -16,6 +16,8 @@
 		2F12CB761E9523FF00ECAA5A /* FirebaseSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12CB751E9523FF00ECAA5A /* FirebaseSampleTests.swift */; };
 		2F12CB811E95240000ECAA5A /* FirebaseSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12CB801E95240000ECAA5A /* FirebaseSampleUITests.swift */; };
 		2F12CB8F1E95242A00ECAA5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */; };
+		2F1DEEB91EC58E4500BEA6D7 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DEEB81EC58E4500BEA6D7 /* AuthWebViewController.swift */; };
+		2F1DEEBB1ECC836100BEA6D7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1DEEBA1ECC836100BEA6D7 /* AdSupport.framework */; };
 		2F9E41471E97B5AC000AB88F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E41461E97B5AC000AB88F /* LoginViewController.swift */; };
 		6B95A6F075153F1B02EF0C50 /* Pods_FirebaseSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765EC16B5E4FFC50607FD0AF /* Pods_FirebaseSampleTests.framework */; };
 		E4376CB288D4F52839E2E40E /* Pods_FirebaseSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A9858958F3E69D51128DB8 /* Pods_FirebaseSampleUITests.framework */; };
@@ -55,6 +57,8 @@
 		2F12CB801E95240000ECAA5A /* FirebaseSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSampleUITests.swift; sourceTree = "<group>"; };
 		2F12CB821E95240000ECAA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2F1DEEB81EC58E4500BEA6D7 /* AuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
+		2F1DEEBA1ECC836100BEA6D7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2F9E41461E97B5AC000AB88F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C816B62B63FCF57C9393220 /* Pods-FirebaseSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		529664C79AA2AFE5D1C32B56 /* Pods-FirebaseSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1DEEBB1ECC836100BEA6D7 /* AdSupport.framework in Frameworks */,
 				16BCD4B7F13466088079EC91 /* Pods_FirebaseSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +130,7 @@
 				2F12CB6C1E9523FF00ECAA5A /* Info.plist */,
 				2F12CB8E1E95242A00ECAA5A /* GoogleService-Info.plist */,
 				2F9E41461E97B5AC000AB88F /* LoginViewController.swift */,
+				2F1DEEB81EC58E4500BEA6D7 /* AuthWebViewController.swift */,
 				2F12CB621E9523FF00ECAA5A /* ViewController.swift */,
 			);
 			path = FirebaseSample;
@@ -164,6 +170,7 @@
 		E9F56F2940F1CA903DCA8789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F1DEEBA1ECC836100BEA6D7 /* AdSupport.framework */,
 				84789500DB49DE0B0F63BFFE /* Pods_FirebaseSample.framework */,
 				765EC16B5E4FFC50607FD0AF /* Pods_FirebaseSampleTests.framework */,
 				01A9858958F3E69D51128DB8 /* Pods_FirebaseSampleUITests.framework */,
@@ -454,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9E41471E97B5AC000AB88F /* LoginViewController.swift in Sources */,
+				2F1DEEB91EC58E4500BEA6D7 /* AuthWebViewController.swift in Sources */,
 				2F12CB631E9523FF00ECAA5A /* ViewController.swift in Sources */,
 				2F12CB611E9523FF00ECAA5A /* AppDelegate.swift in Sources */,
 			);

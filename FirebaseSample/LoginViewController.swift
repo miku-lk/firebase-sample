@@ -9,27 +9,15 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import SafariServices
+import WebKit
 
 class LoginViewController: UIViewController {
     
-    let clientId: String = "cb11c659caf1bb6d9491"
-    
-    @IBOutlet var loginButton: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        }
-    
-    @IBAction func login(){
-
-        let loginUrlStr: String = "https://github.com/login/oauth/authorize?client_id=" + clientId
-        let loginUrl: NSURL = NSURL(string: loginUrlStr)!
-        self.present(SFSafariViewController(url: loginUrl as URL), animated: true)
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
