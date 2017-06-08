@@ -11,12 +11,27 @@ import FirebaseDatabase
 
 class DatabaseViewController: UIViewController {
     
-    var ref: FIRDatabaseReference! = FIRDatabase.database().reference()
+    let ref: FIRDatabaseReference! = FIRDatabase.database().reference()
+    
+    @IBOutlet var nameField: UITextField!
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func save() {
+        let name = nameField.text
+        let text = textField.text
+        if let name = name{
+            ref.child(name).setValue(text)
+            print("\(name): \(text)")
+        } else {
+            print("error")
+        }
     }
 
     override func didReceiveMemoryWarning() {
