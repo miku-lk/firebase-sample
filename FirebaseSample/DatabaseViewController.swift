@@ -26,9 +26,15 @@ class DatabaseViewController: UIViewController {
     @IBAction func save() {
         let name = nameField.text
         let text = textField.text
+        
         if let name = name{
-            ref.child(name).setValue(text)
-            print("\(name): \(text)")
+            // name key が同じ場合は上書き
+//            ref.child(name).setValue(text)
+//            print("\(name): \(text)")
+            
+            // name key が同じでも上書きされない
+            let key = ref.child(name).childByAutoId()
+            key.setValue(text)
         } else {
             print("error")
         }
