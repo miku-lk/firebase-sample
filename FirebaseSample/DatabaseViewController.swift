@@ -16,6 +16,7 @@ class DatabaseViewController: UIViewController {
     @IBOutlet var nameField: UITextField!
     @IBOutlet var textField: UITextField!
     @IBOutlet var saveButton: UIButton!
+    @IBOutlet var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,10 @@ class DatabaseViewController: UIViewController {
         } else {
             print("error")
         }
+    }
+    
+    @IBAction func back() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
